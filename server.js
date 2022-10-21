@@ -7,7 +7,7 @@
 
 const express = require('express')
 const path = require('path')
-const multer = require('multer')
+// const multer = require('multer')
 const app = express()
 
 app.use(express.static('public'))
@@ -17,14 +17,14 @@ const port = process.env.PORT || 8080
 
 // *** Multer Setup ***
 
-const storage = multer.diskStorage({
-    destination: "./public/photos",
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(path.originalname))
-    }
-})
+// const storage = multer.diskStorage({
+//     destination: "./public/photos",
+//     filename: (req, file, cb) => {
+//         cb(null, Date.now() + path.extname(path.originalname))
+//     }
+// })
 
-const upload = multer({ storage: storage })
+// const upload = multer({ storage: storage })
 
 // *** Main - Root Route ***
 
@@ -55,18 +55,18 @@ app.get("/login", (req,res) => {
 
 // *** Error Handling (Middleware) ***
 
-app.use((err, req, res, next) => {
-    console.error(err.stack)
-    res.status(500).send('Error: Something broke.')
-})
+// app.use((err, req, res, next) => {
+//     console.error(err.stack)
+//     res.status(500).send('Error: Something broke.')
+// })
 
 // *** Error Logger Fsunc ***
 
 // Generic Error Logger Function 
-const logErr = (err, req, res, next) => {
-    console.log(err.stack)
-    next(err)
-}
+// const logErr = (err, req, res, next) => {
+//     console.log(err.stack)
+//     next(err)
+// }
 
 // *** Listener ***
 
