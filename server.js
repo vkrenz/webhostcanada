@@ -55,18 +55,18 @@ app.get("/login", (req,res) => {
 
 // *** Error Handling (Middleware) ***
 
-app.use((err, req, res, next) => {
-    console.error(err.stack)
-    res.status(500).send('Error: Something broke.')
-})
+// app.use((err, req, res, next) => {
+//     console.error(err.stack)
+//     res.status(500).send('Error: Something broke.')
+// })
 
 // *** Error Logger Fsunc ***
 
 // Generic Error Logger Function 
-const logErr = (err, req, res, next) => {
-    console.log(err.stack)
-    next(err)
-}
+// const logErr = (err, req, res, next) => {
+//     console.log(err.stack)
+//     next(err)
+// }
 
 // *** Listener ***
 
