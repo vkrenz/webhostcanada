@@ -1,13 +1,13 @@
 {
   "name": "webhost",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web322 Assginemnt 2",
   "main": "server.js",
   "scripts": {
     "test": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Victor Krenzel",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.2",
